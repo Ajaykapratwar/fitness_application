@@ -13,11 +13,11 @@ public class UserValidationService {
 
     private final WebClient userServiceWebClient;
 
-    public boolean ValidateUser(String userId) {
+    public boolean validateUser(String userId) {
 
         try {
             return Boolean.TRUE.equals(userServiceWebClient.get()
-                    .uri("/api/users/{userId}}/validate", userId)
+                    .uri("/api/users/{userId}/validate", userId)
                     .retrieve()
                     .bodyToMono(Boolean.class)
                     .block());
