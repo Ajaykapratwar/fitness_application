@@ -12,7 +12,7 @@ import ActivityDetail from "./components/ActivityDetail";
 const ActivityPage = () => {
   return (
     <Box component="section" sx={{ p: 2, border: '1px dashed grey' }}>
-      <ActivityForm onActivityAdded={() => window.location.reload()} />
+      <ActivityForm onActivityAdded={() => console.log("activity added")} />
       <ActivityList />
     </Box>
   );

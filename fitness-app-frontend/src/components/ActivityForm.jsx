@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box,FormControl,InputLabel,Select,MenuItem,TextField, Button } from "@mui/material";
+import { addActivity } from "../services/api";
 
 const ActivityForm = ({ onActivityAdded }) => {
   const [activity, setActivity] = React.useState({
@@ -11,6 +12,7 @@ const ActivityForm = ({ onActivityAdded }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Submitting activity:", activity);
 
     try {
       await addActivity(activity);
