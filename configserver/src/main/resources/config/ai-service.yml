@@ -3,7 +3,7 @@ server:
 
 spring:
   mongodb:
-    uri: mongodb+srv://kapratwarajay:Admin123@cluster0.fpl7zfu.mongodb.net/fitnessrecommendation
+    uri: 
     database: fitnessrecommendation
   rabbitmq:
     exchange:
